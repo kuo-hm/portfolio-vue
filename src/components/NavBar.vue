@@ -43,7 +43,8 @@ header {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  padding: 10px 10%;
+  padding: 15px 10%;
+  border-bottom: 1px solid rgba(64, 112, 244, 0.8);
 }
 .logo {
   cursor: pointer;
