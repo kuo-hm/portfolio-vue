@@ -22,7 +22,7 @@ export default {};
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  height: 90vh;
+  height: 100vh;
 }
 .intro__hm {
   color: #d32f2f;
