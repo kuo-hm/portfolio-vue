@@ -1,12 +1,19 @@
 <template>
   <div class="intro__container">
-    <div class="intro__left">
+    <div class="intro__left" data-aos="fade-right" data-aos-duration="1000">
       <h1>
-        Hi, <br />I'm a <span class="intro__hm"> Oussama Hmoura </span><br />Web
-        Developer.
+        Hi, <br />I'm a
+        <span
+          class="intro__hm"
+          data-aos="zoom-in"
+          data-aos-duration="1500"
+          data-aos-easing="ease-in-out"
+        >
+          Oussama Hmoura </span
+        ><br />Web Developer.
       </h1>
     </div>
-    <div class="intro__right">
+    <div class="intro__right" data-aos="fade-left" data-aos-duration="1000">
       <img src="@/assets/portf.png" alt="webdev" class="info__img" />
     </div>
   </div>

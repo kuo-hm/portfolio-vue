@@ -1,22 +1,24 @@
 <template>
   <header>
     <div class="logo">
-      <a href="#" class="nav__logo">Kuo</a>
+      <a href="#info" v-smooth-scroll class="nav__logo">Kuo</a>
     </div>
     <nav class="nav">
       <div class="nav__menu" id="nav-menu">
         <ul class="nav__list">
           <li>
-            <a href="#home" class="nav__link">Home</a>
+            <a href="#info" v-smooth-scroll class="nav__link">Home</a>
           </li>
           <li>
-            <a href="#about" class="nav__link">About</a>
+            <a href="#about" v-smooth-scroll class="nav__link">About</a>
           </li>
           <li>
-            <a href="#skills" class="nav__link">Skills</a>
+            <a href="#skills" v-smooth-scroll class="nav__link">Skills</a>
           </li>
-          <li><a href="#work" class="nav__link">Work</a></li>
-          <li><a href="#work" class="nav__link">Contact</a></li>
+          <li><a href="#work" v-smooth-scroll class="nav__link">Work</a></li>
+          <li>
+            <a href="#contact" v-smooth-scroll class="nav__link">Contact</a>
+          </li>
         </ul>
       </div>
 
@@ -28,7 +30,18 @@
 </template>
 
 <script>
-export default {};
+export default {
+  methods: {
+    scrollToMyEl() {
+      const myEl = this.$refs.myEl || this.$el || document.getElementById();
+
+      this.$smoothScroll({
+        scrollTo: myEl, // scrollTo is also allowed to be number
+        hash: "#sampleHash", // required if updateHistory is true
+      });
+    },
+  },
+};
 </script>
 
 <style scoped>
@@ -41,10 +54,14 @@ button {
 }
 header {
   display: flex;
+  position: fixed;
   justify-content: flex-end;
   align-items: center;
+  width: 100%;
   padding: 15px 10%;
   border-bottom: 1px solid rgba(64, 112, 244, 0.8);
+  z-index: 1000;
+  background-color: #fff;
 }
 .logo {
   cursor: pointer;
