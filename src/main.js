@@ -4,7 +4,6 @@ import router from "./router";
 import VueSmoothScroll from "vue3-smooth-scroll";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import VueParticlesBg from "particles-bg-vue";
 import Particles from "particles.vue3";
 
 // ..
@@ -18,6 +17,5 @@ app.use(VueSmoothScroll, {
 });
 
 app.use(Particles);
-app.use(VueParticlesBg);
 app.use(router);
 app.mount("#app");
